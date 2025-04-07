@@ -24,8 +24,8 @@ export default function Hero() {
           className="max-w-3xl mx-auto text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white">
-            Transforming Ideas into
-            <span className="text-secondary"> Digital Experiences</span>
+            Transforming Business for
+            <span className="text-secondary"> Digital Growth</span>
           </h1>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             We create modern, dynamic, and engaging websites that reflect your brand's unique identity and drive

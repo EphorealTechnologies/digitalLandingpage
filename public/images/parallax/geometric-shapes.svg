@@ -1,0 +1,19 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.6">
+    <circle cx="200" cy="200" r="50" fill="#0E7AF6" fill-opacity="0.1"/>
+    <circle cx="1200" cy="300" r="80" fill="#FEB02D" fill-opacity="0.1"/>
+    <circle cx="400" cy="700" r="60" fill="#151944" fill-opacity="0.1"/>
+    <circle cx="1000" cy="800" r="70" fill="#0E7AF6" fill-opacity="0.1"/>
+    
+    <rect x="300" y="100" width="100" height="100" rx="10" fill="#FEB02D" fill-opacity="0.1"/>
+    <rect x="1100" y="500" width="120" height="120" rx="10" fill="#151944" fill-opacity="0.1"/>
+    <rect x="500" y="400" width="80" height="80" rx="10" fill="#0E7AF6" fill-opacity="0.1"/>
+    <rect x="800" y="200" width="90" height="90" rx="10" fill="#FEB02D" fill-opacity="0.1"/>
+    
+    <polygon points="600,600 650,680 550,680" fill="#151944" fill-opacity="0.1"/>
+    <polygon points="900,400 970,500 830,500" fill="#0E7AF6" fill-opacity="0.1"/>
+    <polygon points="300,800 370,900 230,900" fill="#FEB02D" fill-opacity="0.1"/>
+    <polygon points="1100,700 1150,780 1050,780" fill="#151944" fill-opacity="0.1"/>
+  </g>
+</svg>
+

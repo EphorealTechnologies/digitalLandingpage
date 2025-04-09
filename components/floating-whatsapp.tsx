@@ -5,28 +5,20 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 
 export default function FloatingWhatsApp() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true) // Changed to true by default
 
   useEffect(() => {
-    // Show the button after scrolling down a bit
+    // Show the button after scrolling down a bit (for animation purposes)
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setIsVisible(true)
-      } else {
-        setIsVisible(false)
       }
     }
 
     window.addEventListener("scroll", handleScroll)
 
-    // Show the button after a delay even if no scroll
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 3000)
-
     return () => {
       window.removeEventListener("scroll", handleScroll)
-      clearTimeout(timer)
     }
   }, [])
 
@@ -39,8 +31,8 @@ export default function FloatingWhatsApp() {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
       )}
     >
-      <div className="bg-[#25D366] text-white p-3 rounded-full shadow-lg flex items-center justify-center">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="bg-[#25D366] text-white p-4 rounded-full shadow-lg flex items-center justify-center">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -52,4 +44,3 @@ export default function FloatingWhatsApp() {
     </a>
   )
 }
-

@@ -12,19 +12,23 @@ const basePrice = 10000
 const baseServices = [
   {
     title: "Website Development (Design & Coding)",
-    details: "Includes design and coding"
+    details: "Includes design and coding",
   },
   {
     title: "Hosting & Domain (First Year)",
-    details: "Covers domain registration, hosting setup, server cost, and SSL certificate (first year)"
+    details: "Covers domain registration, hosting setup, server cost, and SSL certificate (first year)",
   },
   {
     title: "Content & Optimization",
-    details: "Includes copywriting, images, Page Speed Optimization"
+    details: "Includes copywriting, images, Page Speed Optimization",
   },
   {
     title: "Customer Contact Features",
-    details: "Contact us page, WhatsApp and \"Call us\" phone redirect buttons"
+    details: 'Contact us page, WhatsApp and "Call us" phone redirect buttons',
+  },
+  {
+    title: "Enterprise-Grade Cybersecurity with Cloudflare",
+    details: "DDoS Attack Protection, Bot Traffic Filtering, CAPTCHA Challenge Support, Always-on Monitoring 24/7",
   },
 ]
 
@@ -150,9 +154,7 @@ export default function Pricing() {
                       </div>
                       <span className="font-medium">{service.title}</span>
                     </div>
-                    <div className="ml-7 text-sm text-gray-500">
-                      {service.details}
-                    </div>
+                    <div className="ml-7 text-sm text-gray-500">{service.details}</div>
                   </li>
                 ))}
               </ul>
@@ -246,4 +248,3 @@ export default function Pricing() {
     </section>
   )
 }
-

@@ -41,7 +41,7 @@ export default function Header() {
     const element = document.getElementById(id)
 
     if (element) {
-      const yOffset = -80 // Header height offset
+      const yOffset = -100 // Increased header height offset
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
 
       window.scrollTo({
@@ -60,22 +60,22 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-2" : "bg-transparent py-4",
+        scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-3" : "bg-transparent py-6",
       )}
     >
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={(e) => scrollToSection(e, "/")}>
-          <Logo className="h-10 w-auto" textColor={scrolled ? "text-accent" : "text-white"} />
+          <Logo className="h-14 w-auto" textSize="text-xl" textColor={scrolled ? "text-accent" : "text-white"} />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-8">
           {siteConfig.mainNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-base font-medium transition-colors",
                 scrolled ? "hover:text-primary" : "text-white hover:text-secondary",
               )}
               onClick={(e) => scrollToSection(e, item.href)}
@@ -83,7 +83,7 @@ export default function Header() {
               {item.title}
             </Link>
           ))}
-          <Button asChild variant={scrolled ? "default" : "secondary"}>
+          <Button asChild variant={scrolled ? "default" : "secondary"} size="lg" className="text-base">
             <Link href="/#contact" onClick={(e) => scrollToSection(e, "/#contact")}>
               Get in Touch
             </Link>
@@ -91,19 +91,23 @@ export default function Header() {
         </nav>
 
         {/* Mobile Navigation Toggle */}
-        <Button variant="ghost" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X className={scrolled ? "" : "text-white"} /> : <Menu className={scrolled ? "" : "text-white"} />}
+        <Button variant="ghost" className="md:hidden p-3" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <X className={scrolled ? "" : "text-white"} size={28} />
+          ) : (
+            <Menu className={scrolled ? "" : "text-white"} size={28} />
+          )}
         </Button>
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
           <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
-            <nav className="flex flex-col p-4">
+            <nav className="flex flex-col p-6">
               {siteConfig.mainNav.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="py-2 text-sm font-medium transition-colors hover:text-primary"
+                  className="py-3 text-base font-medium transition-colors hover:text-primary"
                   onClick={(e) => {
                     scrollToSection(e, item.href)
                   }}
@@ -111,7 +115,7 @@ export default function Header() {
                   {item.title}
                 </Link>
               ))}
-              <Button asChild className="mt-4">
+              <Button asChild className="mt-6" size="lg">
                 <Link href="/#contact" onClick={(e) => scrollToSection(e, "/#contact")}>
                   Get in Touch
                 </Link>
@@ -123,4 +127,3 @@ export default function Header() {
     </header>
   )
 }
-

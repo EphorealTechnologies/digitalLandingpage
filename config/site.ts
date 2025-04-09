@@ -30,7 +30,7 @@ export const siteConfig = {
     phone: "tel:+91-9790176084",
     email: "mailto:info@ephoreal.com",
     address: "No: 14, Rajaji Street, 2nd Floor, Sudhana Nagar, Nainarmandapam, Puducherry – 605004",
-    maps: "https://www.google.com/maps?q=No:14,Rajaji+Street,2nd+Floor,Sudhana+Nagar,Nainarmandapam,Puducherry-605004",
+    maps: "https://maps.app.goo.gl/MkGbnEVi3of6K1qL6?g_st=aw",
   },
   businessHours: {
     weekdays: "9:00 AM – 6:00 PM",

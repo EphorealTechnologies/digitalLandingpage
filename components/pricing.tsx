@@ -39,7 +39,9 @@ const addOns = [
       { id: "custom-ui-ux", label: "Custom UI/UX Design", price: 7000 },
       { id: "parallax", label: "Parallax Effects", price: 1000 },
       { id: "dark-mode", label: "Dark Mode & Theme Switcher", price: 1000 },
-      { id: "branding", label: "Branding Package (Logo, Colors, Fonts)", price: 5000 },
+      { id: "branding", label: "Branding Package (Logo, Colors, Fonts)", price: 2000 },
+      { id: "animation background", label: "Dynamic Animation background", price: 1000 },
+      
     ],
   },
   {
